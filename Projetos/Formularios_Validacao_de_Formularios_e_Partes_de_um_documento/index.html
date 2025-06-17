@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário de Validação</h1>
+    </header>
+
+    <nav>
+        
+    </nav>
+
+    <article>
+        <form action="recebe-validacao" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Envio de Arquivo</legend>
+                <input type="file" name="fileToUpload" id="fileToUpload">
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha seu jogo preferido</legend>
+                <select name="Jogos[]" id="Jogos" multiple>
+                    <optgroup label="Steam">
+                        <option value="Red Dead Redemption 2">Red Dead Redemption 2</option>
+                        <option value="Counter-Strike 2">Counter-Strike 2</option>
+                        <option value="Dota 2">Dota 2</option>
+                    </optgroup>
+
+                    <optgroup label="Epic">
+                        <option value="Rocket League®">Rocket League®</option>
+                        <option value="Fall Guys">Fall Guys</option>
+                        <option value="The Sims™ 4">The Sims™ 4</option>
+                    </optgroup>
+
+                    <optgroup label="Xbox Pass">
+                        <option value="Amnesia Collection">Amnesia Collection</option>
+                        <option value="Back 4 Blood">Back 4 Blood </option>
+                        <option value="Research and Destroy">Research and Destroy</option>
+                    </optgroup>
+
+                </select>
+
+                <script>
+                    document.getElementById("Jogos").value = ["web"];
+                </script>
+
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Console Preferido</strong></legend>
+                <legend>Opção 1:</legend>
+                <input type="text" list="autocomplete1" name="autocomplete1" autocomplete="on">
+                <datalist id="autocomplete1">
+                    <option value="Xbox">
+                    <option value="Pc">
+                    <option value="Playstation 5">
+                </datalist>
+                <br>
+                <legend>Opção 2</legend>
+                <input type="text" list="autocomplete2" name="autocomplete2" autocomplete="on">
+                <datalist id="autocomplete2">
+                    <option value="Nintendo switch">
+                    <option value="PlayStation 4">
+                    <option value="Wii">
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>Entrada Especial</legend>
+                <input type="text" name="disabledField" id="disabledField" value="Matheus é lindo" disabled>
+                <br>
+                <input type="text" name="readOnlyField" id="readOnlyField" value="Muito lindo mesmo" readonly>
+                <br>
+                <input type="text" name="placadecarro" id="placadecarro" pattern="[A-Za-z]{3}\s\d{4}" placeholder="Placa do Carro Ex123 AAAA">
+                <br>
+                <input type="text" name="cep" id="cep" pattern="\d{5}-\d{3}" placeholder="Cep ex: 12345-123 ">
+            </fieldset>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </article>
+
+    <footer>
+        <p> Trabalho feito por - Matheus Penteado</p>
+    </footer>
+</body>
+</html>
